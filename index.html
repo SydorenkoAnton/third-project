@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <title>Blanchard</title>
   <link rel="icon" href="img/favicon.ico" />
+  <script src="https://api-maps.yandex.ru/2.1/?e19e074e-c886-4cf8-9c20-ef3ddd518b21&lang=ru_RU"></script>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="css/choices.min.css" />
@@ -18,31 +20,31 @@
 <body>
   <header>
     <div class="header__container-top container flex">
-        <button id="burger" class="header__burger-button btn-reset burger-icon" aria-label="Войти в меню">
+        <button class="header__burger-button btn-reset burger-icon" id="burger" aria-label="Войти в меню">
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
         </button>
-        <nav id="burger-menu" class="burger__menu">
+        <nav class="burger__menu" id="burger-menu">
           <div class="burger__block flex">
             <ul class="burger__list list-reset flex">
               <li class="burger__item">
-                <a href="#about-us" class="burger__link link main-bigtext">О нас</a>
+                <a class="burger__link link main-bigtext" href="#about-us">О нас</a>
               </li>
               <li class="burger__item">
-                <a href="#gallery" class="burger__link link main-bigtext">Галерея</a>
+                <a class="burger__link link main-bigtext" href="#gallery">Галерея</a>
               </li>
               <li class="burger__item">
-                <a href="#catalog" class="burger__link link main-bigtext">Каталог</a>
+                <a class="burger__link link main-bigtext" href="#catalog">Каталог</a>
               </li>
               <li class="burger__item">
-                <a href="#events" class="burger__link link main-bigtext">События</a>
+                <a class="burger__link link main-bigtext" href="#events">События</a>
               </li>
               <li class="burger__item">
-                <a href="#project" class="burger__link link main-bigtext">Проекты</a>
+                <a class="burger__link link main-bigtext" href="#project">Проекты</a>
               </li>
               <li class="burger__item">
-                <a href="#contacts" class="burger__link link main-bigtext">Контакты</a>
+                <a class="burger__link link main-bigtext" href="#contacts">Контакты</a>
               </li>
             </ul>
             <div class="burger__btn">
@@ -92,35 +94,32 @@
             </button>
             <input class="header__form-input" type="text" placeholder="Поиск по сайту" />
           </span>
-          <button id="btn-search-close" class="btn--close btn-reset" type="button"></button>
+          <button class="btn--close btn-reset" id="btn-search-close" type="button"></button>
         </form>
-        <ul class="header__list-top list-reset flex">
-          <li class="header__item-top">
-            <a href="#about-us" class="header__link"> О&nbsp;нас </a>
-          </li>
-          <li class="header__item-top">
-            <a href="#gallery" class="header__link"> Галерея </a>
-          </li>
-          <li class="header__item-top">
-            <a href="#catalog" class="header__link"> Каталог </a>
-          </li>
-          <li class="header__item-top">
-            <a href="#events" class="header__link"> События </a>
-          </li>
-          <li class="header__item-top">
-            <a href="#project" class="header__link"> Проекты </a>
-          </li>
-          <li class="header__item-top">
-            <a href="#contacts0,,lk';" class="header__link"> Контакты </a>
-          </li>
-        </ul>
+        <nav class="header__list-top flex">
+          <div class="header__item-top">
+            <a class="header__link" href="#about-us"> О&nbsp;нас </a>
+          </div>
+          <div class="header__item-top">
+            <a class="header__link" href="#gallery"> Галерея </a>
+          </div>
+          <div class="header__item-top">
+            <a class="header__link" href="#catalog"> Каталог </a>
+          </div>
+          <div class="header__item-top">
+            <a class="header__link" href="#events"> События </a>
+          </div>
+          <div class="header__item-top">
+            <a class="header__link" href="#project"> Проекты </a>
+          </div>
+          <div class="header__item-top">
+            <a class="header__link" href="#contacts"> Контакты </a>
+          </div>
+        </nav>
         <a class="header__come-link flex" href="#">
-          <svg class="header__come-img" width="13" height="13" viewBox="0 0 18 13" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
-          fill="white" />
-        </svg>
+          <svg class="header__come-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+          </svg>
         <span class="header__come-descr">Войти</span>
       </a>
     </div>
@@ -136,13 +135,13 @@
           </button>
           <div class="header__hidden">
             <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link" style="background-image: url('img/header-real1.png')" href="#">
+              <a class="header__hidden-link header__real-first" href="#">
                 <span class="header__card-descr">Тинторетто</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-real2.png')" href="#">
+              <a class="header__hidden-link header__real-second" href="#">
                 <span class="header__card-descr">Фридрих</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-real3.png')" href="#">
+              <a class="header__hidden-link header__real-third" href="#">
                 <span class="header__card-descr">Леонардо</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-real4.png')" href="#">
+              <a class="header__hidden-link header__real-forth" href="#">
                 <span class="header__card-descr">Верроккьо</span></a>
             </div>
           </div>
@@ -157,13 +156,13 @@
           </button>
           <div class="header__hidden">
             <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link" style="background-image: url('img/header-impr1.png')" href="#">
+              <a class="header__hidden-link header__impr-first" href="#">
                 <span class="header__card-descr">Моне</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-impr2.png')" href="#">
+              <a class="header__hidden-link header__impr-second" href="#">
                 <span class="header__card-descr">Сислей</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-impr3.png')" href="#">
+              <a class="header__hidden-link header__impr-third" href="#">
                 <span class="header__card-descr">Мане</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-impr4.png')" href="#">
+              <a class="header__hidden-link header__impr-forth" href="#">
                 <span class="header__card-descr">Ренуар</span></a>
             </div>
           </div>
@@ -171,20 +170,20 @@
         <li class="header__item-bottom">
           <button class="header__btn-bottom btn-reset" aria-label="список художников Постимпрессионизм">
             Постимпрессионизм
-            <svg id="arrow3" class="header__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg class="header__arrow" id="arrow3" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
           <div class="header__hidden">
             <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link" style="background-image: url('img/header-post1.png')" href="#">
+              <a class="header__hidden-link header__post-first" href="#">
                 <span class="header__card-descr">Ван Гог</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-post2.png')" href="#">
+              <a class="header__hidden-link header__post-second" href="#">
                 <span class="header__card-descr">Сезанн</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-post3.png')" href="#">
+              <a class="header__hidden-link header__post-third" href="#">
                 <span class="header__card-descr">Гоген</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-post4.png')" href="#">
+              <a class="header__hidden-link header__post-forth" href="#">
                 <span class="header__card-descr">Сёра</span></a>
             </div>
           </div>
@@ -192,20 +191,20 @@
         <li class="header__item-bottom">
           <button class="header__btn-bottom btn-reset" aria-label="список художников Авангард">
             Авангард
-            <svg id="arrow4" class="header__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg class="header__arrow" id="arrow4" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
           <div class="header__hidden">
             <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link" style="background-image: url('img/header-avan1.png')" href="#">
+              <a class="header__hidden-link header__avan-first" href="#">
                 <span class="header__card-descr">Кандинский</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-avan2.png')" href="#">
+              <a class="header__hidden-link header__avan-second" href="#">
                 <span class="header__card-descr">Маринетти</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-avan3.png')" href="#">
+              <a class="header__hidden-link header__avan-third" href="#">
                 <span class="header__card-descr">Малевич</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-avan4.png')" href="#">
+              <a class="header__hidden-link header__avan-forth" href="#">
                 <span  class="header__card-descr">Пикассо</span></a>
             </div>
           </div>
@@ -213,28 +212,28 @@
         <li class="header__item-bottom">
           <button class="header__btn-bottom btn-reset" aria-label="список художников Футуризм">
             Футуризм
-            <svg id="arrow5" class="header__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg class="header__arrow" id="arrow5" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
           <div class="header__hidden">
             <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu1.png')" href="#">
+              <a class="header__hidden-link header__futu-first" href="#">
                 <span class="header__card-descr">Карра</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu2.png')" href="#">
+              <a class="header__hidden-link header__futu-second" href="#">
                 <span class="header__card-descr">Прателла</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu3.png')" href="#">
+              <a class="header__hidden-link header__futu-third" href="#">
                 <span class="header__card-descr">Северини</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu4.png')" href="#">
+              <a class="header__hidden-link header__futu-forth" href="#">
                 <span class="header__card-descr">Балла</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu1.png')" href="#">
+              <a class="header__hidden-link header__futu-first" href="#">
                 <span class="header__card-descr">Карра</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu2.png')" href="#">
+              <a class="header__hidden-link header__futu-second" href="#">
                 <span class="header__card-descr">Прателла</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu3.png')" href="#">
+              <a class="header__hidden-link header__futu-third" href="#">
                 <span class="header__card-descr">Северини</span></a>
-              <a class="header__hidden-link" style="background-image: url('img/header-futu4.png')" href="#">
+              <a class="header__hidden-link header__futu-forth" href="#">
                 <span class="header__card-descr">Балла</span></a>
             </div>
           </div>
@@ -258,7 +257,7 @@
   <main>
     <h1 class="visually-hidden">Blanchard-художественная галерея</h1>
     <section class="hero" id="hero">
-      <div class="container hero__container">
+      <div class="hero__container container">
         <div class="hero__block flex">
           <h2 class="hero__title">Прикоснитесь к прекрасному</h2>
           <p class="hero__descr">
@@ -266,7 +265,7 @@
             намеченных плановых заданий создаёт предпосылки для новых
             предложений.
           </p>
-          <a href="" class="hero__link"> Подписаться на рассылку </a>
+          <a class="hero__link" href=""> Подписаться на рассылку </a>
         </div>
         <div class="swiper hero__slider">
           <div class="swiper-wrapper">
@@ -284,7 +283,7 @@
           Ясность нашей позиции очевидна: семантический разбор внешних
           противодействий однозначно определяет каждого участника как
           способного принимать собственные решения касаемо распределения
-          внутренних резервов и&nbsp;ресурсов. Не следует, однако,
+          внутренних резервов и ресурсов. Не следует, однако,
           забывать, что высококачественный прототип будущего проекта влечет
           за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития.
           Повседневная практика показывает, что высокое качество позиционных
@@ -344,85 +343,85 @@
                 <a class="swiper-slide gallery__slide" href="#popup">
                   <picture>
                     <source srcset="
-                        img/gallery1-320.jpg
+                        img/Torso-320.jpg
                         " media="(max-width: 650px)" />
                     <source srcset="
-                        img/gallery1-768.jpg
+                        img/Torso-768.jpg
                         " media="(max-width: 950px)" />
                     <source srcset="
-                        img/gallery1-1024.jpg
+                        img/Torso-1024.jpg
                         " media="(max-width: 1400px)" />
-                    <img class="gallery__image" src="img/gallery1.jpg" alt="нарисована женщина картина Малевича Торс (Фигура с розовым лицом)" />
+                    <img class="gallery__image" src="img/Torso.jpg" alt="нарисована женщина картина Малевича Торс (Фигура с розовым лицом)" />
                   </picture>
                 </a>
                 <a class="swiper-slide gallery__slide" href="#popup__2">
                   <picture>
                     <source srcset="
-                        img/gallery2-320.jpg
+                        img/woman-320.jpg
                         " media="(max-width: 650px)" />
                     <source srcset="
-                        img/gallery2-768.png
+                        img/woman-768.png
                         " media="(max-width: 950px)" />
                     <source srcset="
-                        img/gallery2-1024.jpg
+                        img/woman-1024.jpg
                         " media="(max-width: 1400px)" />
-                    <img class="gallery__image" src="img/gallery2.jpg" alt="женщина с граблями картина Малевича" />
+                    <img class="gallery__image" src="img/woman.jpg" alt="женщина с граблями картина Малевича" />
                   </picture>
                 </a>
                 <a class="swiper-slide gallery__slide" href="popup__3">
                   <picture>
                     <source srcset="
-                        img/gallery3-320.jpg
+                        img/pasta-320.jpg
                         " media="(max-width: 650px)" />
                     <source srcset="
-                        img/gallery3-768.jpg
+                        img/pasta-768.jpg
                         " media="(max-width: 950px)" />
                     <source srcset="
-                        img/gallery3-1024.jpg
+                        img/pasta-1024.jpg
                         " media="(max-width: 1400px)" />
-                    <img class="gallery__image" src="img/gallery3.jpg" alt="картина Малевича уборка ржи" />
+                    <img class="gallery__image" src="img/pasta.jpg" alt="картина Малевича уборка макарон" />
                   </picture>
                 </a>
                 <a class="swiper-slide gallery__slide" data-path="modul4" href="#">
                   <picture>
                     <source srcset="
-                        img/gallery4-320.jpg
+                        img/supermathiks-320.jpg
                         " media="(max-width: 650px)" />
                     <source srcset="
-                        img/gallery4-768.jpg
+                        img/supermathiks-768.jpg
                         " media="(max-width: 950px)" />
                     <source srcset="
-                        img/gallery4-1024.jpg
+                        img/supermathiks-1024.jpg
                         " media="(max-width: 1400px)" />
-                    <img class="gallery__image" src="img/gallery4.jpg" alt="картина Малевича суперматика" />
+                    <img class="gallery__image" src="img/supermathiks.jpg" alt="картина Малевича суперматика" />
                   </picture>
                 </a>
                 <a class="swiper-slide gallery__slide" data-path="modul5" href="#">
                   <picture>
                     <source srcset="
-                        img/gallery5-320.jpg
+                        img/bucket-320.jpg
                         " media="(max-width: 650px)" />
                     <source srcset="
-                        img/gallery5-768.jpg
+                        img/bucket-768.jpg
                         " media="(max-width: 950px)" />
                     <source srcset="
-                        img/gallery5-1024.jpg
+                        img/bucket-1024.jpg
                         " media="(max-width: 1400px)" />
-                    <img class="gallery__image" src="img/gallery5.jpg" alt="картина Малевича крестьянки с ведрами" />
+                    <img class="gallery__image" src="img/bucket.jpg" alt="картина Малевича крестьянки с ведрами" />
                   </picture>
                 </a>
                 <a class="swiper-slide gallery__slide" data-path="modul6" href="#">
                   <picture class="gallery__slade-6">
                     <source srcset="
-                        img/gallery6-1024.jpg
+                        img/super-1024.jpg
                         " media="(max-width: 650px)" />
                     <source srcset="
-                        img/gallery6-768.jpg
+                        img/super-768.jpg
                         " media="(max-width: 950px)" />
                     <source srcset="
-                        img/gallery6-1024.jpg
+                        img/super-1024.jpg
                         " media="(max-width: 1400px)" />
-                    <img class="gallery__image" src="img/gallery6.jpg" alt="картина Малевича суперматизм 38" />
+                    <img class="gallery__image" src="img/super.jpg" alt="картина Малевича суперматизм 38" />
                   </picture>
                 </a>
               </div>
@@ -430,95 +429,94 @@
           </div>
         </div>
       </div>
-      <div id="popup" class="popup">
+      <div class="popup" id="popup">
         <div class="popup__body">
-            <div class="popup__content flex">
-              <div class="popup__left-block">
-                <img class="popup__img" src="img/gallery1-1024.jpg" alt="Женщина с граблями">
+          <div class="popup__content flex">
+            <div class="popup__left-block">
+              <img class="popup__img" src="img/Torso-1024.jpg" alt="Торс (Фигура с розовым лицом)">
+            </div>
+            <div class="popup__right-block">
+              <button class="popup__close-btn btn-reset">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"></path>
+                </svg>
+              </button>
+              <div class="popup__text flex">
+                <h3 class="popup__title main-bigtext">Казимир Малевич</h3>
+                <h4 class="popup__subtitle">"Торс (Фигура с розовым лицом)"</h4>
+                <span class="popup__date">1929</span>
+                <p class="popup__descr main-text">Эти странные безликие «полуобразы» (так называл подобные работы сам художник), зашифрованные в женских фигурах и торсах, существуют по мысли К.Малевича, в параллельном мире, в пределах вымышленного художником Космоса, в пространстве без времени.</p>
               </div>
-              <div class="popup__right-block">
-                <button class="popup__close-btn btn-reset">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"></path>
-                  </svg>
-                </button>
-                <div class="popup__text flex">
-                  <h3 class="popup__title main-bigtext">Казимир Малевич</h3>
-                  <h4 class="popup__subtitle">"Торс (Фигура с розовым лицом)"</h4>
-                  <span class="popup__date">1929</span>
-                  <p class="popup__descr main-text">Эти странные безликие «полуобразы» (так называл подобные работы сам художник), зашифрованные в женских фигурах и торсах, существуют по мысли К.Малевича, в параллельном мире, в пределах вымышленного художником Космоса, в пространстве без времени.
-                  </p>
-                </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div id="popup__2" class="popup">
+      <div class="popup" id="popup__2">
         <div class="popup__body">
-            <div class="popup__content flex">
-              <div class="popup__left-block">
-                <img class="popup__img" src="img/gallery2-1024.jpg" alt="Женщина с граблями">
+          <div class="popup__content flex">
+            <div class="popup__left-block">
+              <img class="popup__img" src="img/woman-1024.jpg" alt="Женщина с граблями">
+            </div>
+            <div class="popup__right-block">
+              <button class="popup__close-btn btn-reset">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"></path>
+                </svg>
+              </button>
+              <div class="popup__text flex">
+                <h3 class="popup__title main-bigtext">Казимир Малевич</h3>
+                <h4 class="popup__subtitle">"Женщина с граблями"</h4>
+                <span class="popup__date">1931-1932</span>
+                <p class="popup__descr main-text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник
+                  принялся
+                  за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской
+                  выставок в 1927 году.
+                </p>
               </div>
-              <div class="popup__right-block">
-                <button class="popup__close-btn btn-reset">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"></path>
-                  </svg>
-                </button>
-                <div class="popup__text flex">
-                  <h3 class="popup__title main-bigtext">Казимир Малевич</h3>
-                  <h4 class="popup__subtitle">"Женщина с граблями"</h4>
-                  <span class="popup__date">1931-1932</span>
-                  <p class="popup__descr main-text">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник
-                    принялся
-                    за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской
-                    выставок в 1927 году.
-                  </p>
-                </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div id="popup__3" class="popup">
+      <div class="popup" id="popup__3">
         <div class="popup__body">
-            <div class="popup__content flex">
-              <div class="popup__left-block">
-                <img class="popup__img" src="img/gallery3-1024.jpg" alt="Уборка ржи">
+          <div class="popup__content flex">
+            <div class="popup__left-block">
+              <img class="popup__img" src="img/pasta-1024.jpg" alt="Уборка макарон">
+            </div>
+            <div class="popup__right-block">
+              <button class="popup__close-btn btn-reset">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"></path>
+                </svg>
+              </button>
+              <div class="popup__text flex">
+                <h3 class="popup__title main-bigtext">Казимир Малевич</h3>
+                <h4 class="popup__subtitle">"Уборка ржи"</h4>
+                <span class="popup__date">1911</span>
+                <p class="popup__descr main-text">"Уборка ржи" одна из первых картин, явившая признаки кубофутуристической живописи. Стога сена в виде цилиндров и четкие формы человеческих фигур составляют довольно сильную и устойчивую композицию.
+                </p>
               </div>
-              <div class="popup__right-block">
-                <button class="popup__close-btn btn-reset">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z" fill="black"></path>
-                  </svg>
-                </button>
-                <div class="popup__text flex">
-                  <h3 class="popup__title main-bigtext">Казимир Малевич</h3>
-                  <h4 class="popup__subtitle">"Уборка ржи"</h4>
-                  <span class="popup__date">1911</span>
-                  <p class="popup__descr main-text">"Уборка ржи" одна из первых картин, явившая признаки кубофутуристической живописи. Стога сена в виде цилиндров и четкие формы человеческих фигур составляют довольно сильную и устойчивую композицию.
-                  </p>
-                </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="catalog" id="catalog">
       <div class="container catalog__container">
-        <h2 class="catalog__title section-title">Каталог</h2>
+        <h2 class="catalog__title">Каталог</h2>
         <p class="catalog__descr">Акционеры крупнейших компаний, которые представляют собой яркий пример
           континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы
           этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
           нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
           на&nbsp;независимые элементы.</p>
         <div class="catalog__content flex">
-          <div class="catalog__tabs-wrapper tab" id="catalog-tabs">
+          <div class="catalog__tabs-wrapper" id="catalog-tabs">
             <div class="catalog__tab tab__content tab__content--active" data-target="domeniko-girlandaio">
               <div class="tab__image">
-                <img src="img/katalog.jpg" alt="Доменико Гирландайо">
+                <img src="img/Girlandajo.jpg" alt="Доменико Гирландайо">
               </div>
               <div class="tab__content">
                 <h3 class="tab__title subtitle">Доменико Гирландайо</h3>
@@ -545,12 +543,12 @@
               </div>
             </div>
           </div>
-          <div class="catalog__period-wrapper period">
+          <div class="catalog__period-wrapper">
             <ul class="period__list accordion list-reset">
               <li class="period__item">
                 <button class="period__btn btn-reset accordion__control">
                   <span class="period__btn-inner">
-                    <span class="period__title subtitle">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                    <span class="period__title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
                   </span>
                   <svg class="accordion__icon" width="50" height="50" viewbox="0 0 50 50" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -850,10 +848,10 @@
               <div class="events-card swiper-slide">
                 <div class="events-card__top">
                   <picture>
-                    <source srcset="img/event1-320.jpg" media="(max-width: 650px)" />
-                    <source srcset="img/event1-768.jpg" media="(max-width: 950px)" />
-                    <source srcset="img/event1-1024.jpg" media="(max-width: 1400px)" />
-                    <img class="events-card__img img" src="img/event1.png" alt="Книжная гравюра"/>
+                    <source srcset="img/engraving-320.jpg" media="(max-width: 650px)" />
+                    <source srcset="img/engraving-768.jpg" media="(max-width: 950px)" />
+                    <source srcset="img/engraving-1024.jpg" media="(max-width: 1400px)" />
+                    <img class="events-card__img" src="img/engraving.png" alt="Книжная гравюра"/>
                   </picture>
                   <div class="events-card__figcaption">
                     <p class="events-card__figcaption-text">Музей им. Щусева</p>
@@ -870,16 +868,16 @@
                     основатель художественной династии, которую продолжили его
                     брат Давид и сын Ридольфо.
                   </p>
-                  <a href="#" class="events-card__link main-text">Подробнее</a>
+                  <a class="events-card__link main-text" href="#">Подробнее</a>
                 </div>
               </div>
               <div class="events-card swiper-slide">
                 <div class="events-card__top">
                   <picture>
-                    <source srcset="img/event2-320.jpg" media="(max-width: 650px)" />
-                    <source srcset="img/event2-768.jpg" media="(max-width: 950px)" />
-                    <source srcset="img/event2-1024.jpg" media="(max-width: 1400px)" />
-                    <img class="events-card__img img" src="img/event2.png"  alt="дискуссия"/>
+                    <source srcset="img/meeting-320.jpg" media="(max-width: 650px)" />
+                    <source srcset="img/meeting-768.jpg" media="(max-width: 950px)" />
+                    <source srcset="img/meeting-1024.jpg" media="(max-width: 1400px)" />
+                    <img class="events-card__img" src="img/meeting.png"  alt="дискуссия"/>
                   </picture>
                   <div class="events-card__figcaption">
                     <p class="events-card__figcaption-text">ММОМА</p>
@@ -895,16 +893,16 @@
                     Высокий уровень вовлечения представителей целевой
                     аудитории является четким доказательством простого факта.
                   </p>
-                  <a href="#" class="events-card__link main-text">Подробнее</a>
+                  <a class="events-card__link main-text" href="#">Подробнее</a>
                 </div>
               </div>
               <div class="events-card swiper-slide">
                 <div class="events-card__top">
                   <picture>
-                    <source srcset="img/event3-320.jpg" media="(max-width: 650px)" />
-                    <source srcset="img/event3-768.jpg" media="(max-width: 950px)" />
-                    <source srcset="img/event3-1024.jpg" media="(max-width: 1400px)" />
-                    <img class="events-card__img img" src="img/event3.png" alt="музей"/>
+                    <source srcset="img/gallery-320.jpg" media="(max-width: 650px)" />
+                    <source srcset="img/gallery-768.jpg" media="(max-width: 950px)" />
+                    <source srcset="img/gallery-1024.jpg" media="(max-width: 1400px)" />
+                    <img class="events-card__img" src="img/gallery.png" alt="музей"/>
                   </picture>
                   <div class="events-card__figcaption">
                     <p class="events-card__figcaption-text">Еврейский музей</p>
@@ -921,20 +919,19 @@
                     методология разработки играет важную роль в формировании
                     глубокомысленных рассуждений.
                   </p>
-                  <a href="#" class="events-card__link main-text">Подробнее</a>
+                  <a class="events-card__link main-text" href="#">Подробнее</a>
                 </div>
               </div>
               <div class="events-card swiper-slide">
                 <div class="events-card__top">
                   <picture>
-                    <source srcset="img/event4-320.jpg" media="(max-width: 650px)" />
-                    <source srcset="img/event4-768.jpg" media="(max-width: 950px)" />
-                    <source srcset="img/event4-1024.jpg" media="(max-width: 1400px)" />
-                    <img class="events-card__img img" src="img/event4.png" alt="Третьяковка"/>
+                    <source srcset="img/foil-320.jpg" media="(max-width: 650px)" />
+                    <source srcset="img/foil-768.jpg" media="(max-width: 950px)" />
+                    <source srcset="img/foil-1024.jpg" media="(max-width: 1400px)" />
+                    <img class="events-card__img" src="img/foil.png" alt="Третьяковка"/>
                   </picture>
                   <div class="events-card__figcaption">
-                    <p class="events-card__figcaption-text">Третьяковка на Крымском валу
-                    </p>
+                    <p class="events-card__figcaption-text">Третьяковка на Крымском валу</p>
                     <p class="events-card__figcaption-text">с 30 марта по 30 апреля</p>
                   </div>
                 </div>
@@ -946,16 +943,16 @@
                     Внезапно, реплицированные с зарубежных источников,
                     современные исследования.
                   </p>
-                  <a href="#" class="events-card__link main-text">Подробнее</a>
+                  <a class="events-card__link main-text" href="#">Подробнее</a>
                 </div>
               </div>
               <div class="events-card swiper-slide">
                 <div class="events-card__top">
                   <picture>
-                    <source srcset="img/event5-320.jpg" media="(max-width: 650px)" />
-                    <source srcset="img/event5-768.jpg" media="(max-width: 950px)" />
-                    <source srcset="img/event5-1024.jpg" media="(max-width: 1400px)" />
-                    <img class="events-card__img img" src="img/event5.png"  alt="серия «Метафора серебра»"/>
+                    <source srcset="img/metaphor-320.jpg" media="(max-width: 650px)" />
+                    <source srcset="img/metaphor-768.jpg" media="(max-width: 950px)" />
+                    <source srcset="img/metaphor-1024.jpg" media="(max-width: 1400px)" />
+                    <img class="events-card__img" src="img/metaphor.png"  alt="серия «Метафора серебра»"/>
                   </picture>
                   <div class="events-card__figcaption">
                     <p class="events-card__figcaption-text">ММАМ</p>
@@ -971,7 +968,7 @@
                     основатель художественной династии, которую продолжили его
                     брат Давид и сын Ридольфо.
                   </p>
-                  <a href="#" class="events-card__link main-text">Подробнее</a>
+                  <a class="events-card__link main-text" href="#">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -1047,31 +1044,31 @@
           <div class="swiper-button-prev swiper-button-prev--project"></div>
           <div class="swiper project__swiper">
             <div class="swiper-wrapper">
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect2.jpg" alt="Логотип freelands foudation">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect3.jpg" alt="Логотип institute for contemporary art">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect1.jpg" alt="Логотип workhouse arts center">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect4.jpg" alt="Логотип 1849 wine co">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect5.jpg" alt="Логотип hiscox">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect6.jpg" alt="Логотип camden arts centre">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect7.jpg" alt="Логотип stassen premium belgian cider">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect8.jpg" alt="Логотип watts gallery artists village">
               </a>
-              <a href="#" class="swiper-slide project__item">
+              <a class="swiper-slide project__item" href="#">
                 <img class="project__img" src="img/progect9.jpg" alt="Логотип ESAD">
               </a>
             </div>
@@ -1094,7 +1091,7 @@
           <form class="contacts__form flex" id="form" action="#">
             <div class="contacts__form-inputs flex">
               <div class="contacts__form-card">
-                <input class="contacts__input main-text" id="name" type="text" name="name" placeholder="Имя*"
+                <input class="contacts__input main-text" id="text" type="text" name="text" placeholder="Имя*"
                   data-validate-field="name">
               </div>
               <div class="contacts__form-card">
@@ -1110,45 +1107,42 @@
             <h3 class="contacts__messendjer-descr main-bigtext">
               Связаться в&nbsp;один клик
             </h3>
-            <ul class="contacts__list list-reset flex">
-              <li class="contacts__item">
-                <a href="https://www.whatsapp.com/" aria-label="связаться с нами в вацап">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
-                      fill="#30BF39" />
-                    <path
-                      d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z"
-                      fill="white" />
-                  </svg>
-                </a>
-              </li>
-              <li class="contacts__item">
-                <a href="https://web.telegram.org/" aria-label="связаться с нами в телеграм">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
-                      fill="url(#paint0_linear_136320_63)" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z"
-                      fill="white" />
-                    <defs>
-                      <linearGradient id="paint0_linear_136320_63" x1="20" y1="0" x2="20" y2="39.7033"
-                        gradientUnits="userSpaceOnUse">
-                        <stop offset="1" stop-color="#2AABEE"></stop>
-                        <stop offset="1" stop-color="#229ED9"></stop>
-                      </lineargradient>
-                    </defs>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <div class="contacts__list flex">
+              <a class="contacts__item" href="https://www.whatsapp.com/" aria-label="связаться с нами в вацап">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
+                    fill="#30BF39" />
+                  <path
+                    d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z"
+                    fill="white" />
+                </svg>
+              </a>
+              <a class="contacts__item" href="https://web.telegram.org/" aria-label="связаться с нами в телеграм">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+                    fill="url(#paint0_linear_136320_63)" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z"
+                    fill="white" />
+                  <defs>
+                    <linearGradient id="paint0_linear_136320_63" x1="20" y1="0" x2="20" y2="39.7033"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="1" stop-color="#2AABEE"></stop>
+                      <stop offset="1" stop-color="#229ED9"></stop>
+                    </lineargradient>
+                  </defs>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe src="https://snazzymaps.com/embed/404446" width="100%" height="700px" style="border:none;"></iframe>
-      </div>
+      <section class="map">
+        <h2 class="map__title visually-hidden">Карта</h2>
+        <div class="map__wrapper" id="map"></div>
+      </section>
     </section>
   </main>
   <footer>
@@ -1200,8 +1194,8 @@
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/tippy-bundle.umd.min.js"></script>
-  <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

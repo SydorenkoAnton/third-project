@@ -16,11 +16,11 @@
       if (el != dropdown) {
         el.classList.remove("is-active");
       }
-    })
+    });
     dropdown.classList.toggle("is-active");
-    btn.classList.toggle("is-active")
-  })
-})
+    btn.classList.toggle("is-active");
+  });
+});
 
 document.addEventListener("click", function(e) {
   let target = e.target;
@@ -31,8 +31,8 @@ document.addEventListener("click", function(e) {
     document.querySelectorAll(".header__btn-bottom").forEach(el => {
         el.classList.remove("is-active");
     });
-  }
-})
+  };
+});
 
 /*burger*/
 
@@ -50,17 +50,17 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 /*---search---*/
-const btnSearch = document.querySelector('.header__search-top')
-const btnCloseSearch = document.querySelector('.btn--close')
-const menuSearch = document.querySelector('.search')
+const btnSearch = document.querySelector('.header__search-top');
+const btnCloseSearch = document.querySelector('.btn--close');
+const menuSearch = document.querySelector('.search');
 
 btnSearch.addEventListener('click', () => {
-  menuSearch.classList.add('search--active')
-})
+  menuSearch.classList.add('search--active');
+});
 
 btnCloseSearch.addEventListener('click', () => {
-  menuSearch.classList.remove('search--active')
-})
+  menuSearch.classList.remove('search--active');
+});
 
 /*heroSlider*/
 
@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     breakpoints: {
-      650: {
+      578: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 36,
       },
 
-      1400: {
+      1441: {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 50,
@@ -189,8 +189,8 @@ if (popupCloseIcon.length > 0) {
       e.preventDefault();
       document.body.classList.remove('lock');
     });
-  }
-}
+  };
+};
 
 function popupOpen(curentPopup) {
   if (curentPopup && unlock) {
@@ -202,23 +202,23 @@ function popupOpen(curentPopup) {
     curentPopup.addEventListener("click", function (e) {
       if (!e.target.closest('.popup')) {
         popupClose(e.target.closest('.popup'));
-      }
+      };
     });
-  }
-}
+  };
+};
 
 function popupClose(popupActive, doUnlock = true) {
   if (unlock) {
     popupActive.classList.remove('open');
-  }
-}
+  };
+};
 
 document.addEventListener('keydown', function (e) {
   if (e.which === 27) {
     const popupActive = document.querySelector('.popup.open');
     popupClose(popupActive);
-  }
-})
+  };
+});
 
 // accordion
 
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
       collapsible: true
     });
   });
-})
+});
 
 // tabs
 
@@ -262,12 +262,12 @@ document.querySelectorAll('.artist__btn').forEach(function(tabsBtn) {
 	    document.body.clientWidth,
 	    document.documentElement.clientWidth
 	  );
-	}
+	};
 
 	function scrollToContent (link, isMobile) {
 		if (isMobile && getWindowWidth() > MOBILE_WIDTH) {
 			return;
-		}
+		};
 
 	  const href = link.getAttribute('href').substring(1);
 	  const scrollTarget = document.getElementById(href);
@@ -277,7 +277,7 @@ document.querySelectorAll('.artist__btn').forEach(function(tabsBtn) {
 	      top: elementPosition,
 	      behavior: 'smooth'
 	  });
-	}
+	};
 
 	document.querySelectorAll('.artist__btn').forEach(link => {
 	  link.addEventListener('click', function(e) {
@@ -322,17 +322,17 @@ new Swiper(".swiper--events", {
       slidesPerView: 1,
       slidesPerGroup: 1,
     },
-    650: {
+    578: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34,
     },
-    950: {
+    993: {
       slidesPerView: 3,
       slidesPerGroup: 1,
       spaceBetween: 27,
     },
-    1400: {
+    1441: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50,
@@ -359,15 +359,15 @@ let swiperProject = new Swiper('.project__swiper', {
         slidesPerView: 1,
       },
 
-      500: {
+      578: {
           slidesPerView: 2,
           spaceBetween: 34,
       },
-      950: {
+      993: {
           slidesPerView: 2,
           spaceBetween: 50,
       },
-      1400: {
+      1441: {
           slidesPerView: 3,
           spaceBetween: 50,
       }
@@ -386,6 +386,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let e = new Inputmask("+7 (999) 999-99-99");
 
   e.mask(selector);
+});
 
 /*validate*/
 
@@ -397,43 +398,77 @@ const validation = new JustValidate(
     errorLabelStyle: {
       color: '#d11616',
     },
-
   },
 );
 
-validation
-  .addField('#name', [
-    {
-      rule: 'required',
-      errorMessage: 'Введите ваше имя',
+new JustValidate('#form', {
+  rules: {
+    text: {
+      required: true,
+      minLength: 2,
+      maxLength: 30
     },
-    {
-      rule: 'minLength',
-      value: 3,
-      errorMessage: 'Введите более 3-х символов',
+    tel: {
+      required: true,
+      function: (name, value) => {
+        const tel = selector.inputmask.unmaskedvalue()
+        return Number(tel) && tel.length === 10
+      }
     },
-    {
-      rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Введите не более 30-ти символов'
-    },
-    {
-      rule: 'customRegexp',
-      value: /^[а-яА-ЯёЁa-zA-Z]+$/,
-      errorMessage: 'Неверный формат',
-    },
-  ])
-  .addField('#tel', [
-    {
-      rule: 'required',
-      errorMessage: 'Укажите ваш телефон',
-    },
-    {
-      rule: 'minLength',
-      value: 10,
-      errorMessage: 'Введите 10 символов',
-    },
+  },
 
-  ]);
-});
+  messages: {
+    text: {
+      remote: 'Подходит',
+      required: 'Требуется ввести имя',
+      minLength: 'Нужно минимум два символа',
+      maxLength: 'Слишком много букв!',
 
+    },
+    tel: {
+      remote: 'Подходит',
+      required: 'Требуется ввести телефон',
+      minLength: 'Нужно 10 цифр',
+      maxLength: 'Нужно не более 10 цифр',
+      function: 'Введите только 10 цифр'
+    },
+  },
+})
+
+// map
+
+ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [55.76033534577601,37.61479241699063],
+            zoom: 14,
+            controls: ['geolocationControl', 'zoomControl']
+        },{
+          geolocationControlFloat: 'none',
+          geolocationControlPosition: {
+            bottom: '310px',
+            right: '18px'
+          },
+          zoomControlSize: 'medium',
+          zoomControlPosition: {
+            bottom: '370px',
+            right: '18px'
+          }
+        });
+
+        var myPlacemark = new ymaps.Placemark([55.75896732335444,37.614334655064994], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map.svg',
+          iconImageSize: [20, 20],
+          iconImageOffset: [-5, -37]
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+      myMap.behaviors.disable('scrollZoom');
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('typeSelector');
+      myMap.controls.remove('fullscreenControl');
+      myMap.controls.remove('rulerControl');
+
+    }
