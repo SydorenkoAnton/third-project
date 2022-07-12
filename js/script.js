@@ -1,18 +1,18 @@
 
 /*header__cards*/
 
-  document.querySelectorAll(".header__btn-bottom").forEach(item => {
+  document.querySelectorAll(".header-bottom__btn").forEach(item => {
   item.addEventListener("click", function() {
     let btn = this;
-    let dropdown = this.parentElement.querySelector(".header__hidden");
+    let dropdown = this.parentElement.querySelector(".header-bottom__hidden");
 
-    document.querySelectorAll(".header__btn-bottom").forEach(el => {
+    document.querySelectorAll(".header-bottom__btn").forEach(el => {
       if (el != btn) {
         el.classList.remove("is-active");
       }
     });
 
-    document.querySelectorAll(".header__hidden").forEach(el => {
+    document.querySelectorAll(".header-bottom__hidden").forEach(el => {
       if (el != dropdown) {
         el.classList.remove("is-active");
       }
@@ -24,11 +24,11 @@
 
 document.addEventListener("click", function(e) {
   let target = e.target;
-  if (!target.closest(".header__list-bottom")) {
-    document.querySelectorAll(".header__hidden").forEach(el => {
+  if (!target.closest(".header-bottom__list")) {
+    document.querySelectorAll(".header-bottom__hidden").forEach(el => {
         el.classList.remove("is-active");
     })
-    document.querySelectorAll(".header__btn-bottom").forEach(el => {
+    document.querySelectorAll(".header-bottom__btn").forEach(el => {
         el.classList.remove("is-active");
     });
   };
@@ -42,16 +42,16 @@ window.addEventListener('DOMContentLoaded', function () {
   burgerBtn.addEventListener('click', function () {
     burgerBtn.classList.toggle('burger-icon-active');
     if (burgerBtn.classList.contains('burger-icon-active')) {
-      burger__menu.classList.add('burger__menu-active');
+      burger__menu.classList.add('burger-active');
     } else {
-      burger__menu.classList.remove('burger__menu-active');
+      burger__menu.classList.remove('burger-active');
     };
   });
 });
 
 /*---search---*/
-const btnSearch = document.querySelector('.header__search-top');
-const btnCloseSearch = document.querySelector('.btn--close');
+const btnSearch = document.querySelector('.header-top__search-top');
+const btnCloseSearch = document.querySelector('.btn-close');
 const menuSearch = document.querySelector('.search');
 
 btnSearch.addEventListener('click', () => {
@@ -342,7 +342,7 @@ new Swiper(".swiper--events", {
 
 /*project__tooltip*/
 
-tippy('.btn--tooltip', {
+tippy('.btn-tooltip', {
   theme: 'tooltip',
   trigger: 'click',
 });

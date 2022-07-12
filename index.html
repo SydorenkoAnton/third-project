@@ -19,13 +19,13 @@
 
 <body>
   <header>
-    <div class="header__container-top container flex">
-        <button class="header__burger-button btn-reset burger-icon" id="burger" aria-label="Войти в меню">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-        <nav class="burger__menu" id="burger-menu">
+    <section class="header-top container flex">
+      <button class="header-top__burger-button btn-reset burger-icon" id="burger" aria-label="Войти в меню">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+      <nav class="burger" id="burger-menu">
           <div class="burger__block flex">
             <ul class="burger__list list-reset flex">
               <li class="burger__item">
@@ -59,20 +59,20 @@
             </div>
           </div>
         </nav>
-        <img class="header__logo" src="img/logo.svg" alt="логотип Бланчард" />
-        <button class="header__search-top btn-reset" type="submit" aria-label="Найти">
-          <svg class="header__search" width="23" height="22" viewBox="0 0 23 22" fill="none"
+        <img class="header-top__logo" src="img/logo.svg" alt="логотип Бланчард" />
+        <button class="header-top__search-top btn-reset" type="submit" aria-label="Найти">
+          <svg class="header-top__search" width="23" height="22" viewBox="0 0 23 22" fill="none"
             xmlns="http://www.w3.org/2000/svg">
-            <rect class="header__search-hover" width="6.8678" height="1.71695"
+            <rect class="header-top__search-hover" width="6.8678" height="1.71695"
               transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
-            <path class="header__search-hover" fill-rule="evenodd" clip-rule="evenodd"
+            <path class="header-top__search-hover" fill-rule="evenodd" clip-rule="evenodd"
               d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
               fill="white" />
           </svg>
         </button>
         <form class="search">
-          <button class="header__btn-search-modal btn-reset" aria-label="Найти">
-            <svg class="header__search-modal" width="23" height="22" viewBox="0 0 23 22" fill="none"
+          <button class="header-top__btn-search-modal btn-reset" aria-label="Найти">
+            <svg class="header-top__search-modal" width="23" height="22" viewBox="0 0 23 22" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
                 transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -82,8 +82,8 @@
             </svg>
           </button>
           <span>
-            <button class="header__btn-search-min btn-reset">
-              <svg class="header__search-modal" width="23" height="22" viewBox="0 0 23 22" fill="none"
+            <button class="header-top__btn-search-min btn-reset">
+              <svg class="header-top__search-modal" width="23" height="22" viewBox="0 0 23 22" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695"
                   transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -92,156 +92,156 @@
                   fill="white" />
               </svg>
             </button>
-            <input class="header__form-input" type="text" placeholder="Поиск по сайту" />
+            <input class="header-top__form-input form-input" type="text" placeholder="Поиск по сайту" />
           </span>
-          <button class="btn--close btn-reset" id="btn-search-close" type="button"></button>
+          <button class="btn-close btn-reset" id="btn-search-close" type="button"></button>
         </form>
-        <nav class="header__list-top flex">
-          <div class="header__item-top">
-            <a class="header__link" href="#about-us"> О&nbsp;нас </a>
+        <nav class="header-top__list flex">
+          <div class="header-top__item">
+            <a class="header-top__link" href="#about-us"> О&nbsp;нас </a>
           </div>
-          <div class="header__item-top">
-            <a class="header__link" href="#gallery"> Галерея </a>
+          <div class="header-top__item">
+            <a class="header-top__link" href="#gallery"> Галерея </a>
           </div>
-          <div class="header__item-top">
-            <a class="header__link" href="#catalog"> Каталог </a>
+          <div class="header-top__item">
+            <a class="header-top__link" href="#catalog"> Каталог </a>
           </div>
-          <div class="header__item-top">
-            <a class="header__link" href="#events"> События </a>
+          <div class="header-top__item">
+            <a class="header-top__link" href="#events"> События </a>
           </div>
-          <div class="header__item-top">
-            <a class="header__link" href="#project"> Проекты </a>
+          <div class="header-top__item">
+            <a class="header-top__link" href="#project"> Проекты </a>
           </div>
-          <div class="header__item-top">
-            <a class="header__link" href="#contacts"> Контакты </a>
+          <div class="header-top__item">
+            <a class="header-top__link" href="#contacts"> Контакты </a>
           </div>
         </nav>
-        <a class="header__come-link flex" href="#">
-          <svg class="header__come-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="header-top__come-link flex" href="#">
+          <svg class="header-top__come-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
           </svg>
-        <span class="header__come-descr">Войти</span>
+        <span class="header-top__come-descr">Войти</span>
       </a>
-    </div>
-    <div class="header__container-bottom container flex">
-      <ul class="header__list-bottom list-reset flex">
-        <li class="header__item-bottom">
-          <button class="header__btn-bottom btn-reset" aria-label="список художников Реализм">
+    </section>
+    <div class="header-bottom container flex">
+      <ul class="header-bottom__list list-reset flex">
+        <li class="header-bottom__item">
+          <button class="header-bottom__btn btn-reset" aria-label="список художников Реализм">
             Реализм
-            <svg id="arrow1" class="header__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg id="arrow1" class="header-bottom__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
-          <div class="header__hidden">
-            <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link header__real-first" href="#">
-                <span class="header__card-descr">Тинторетто</span></a>
-              <a class="header__hidden-link header__real-second" href="#">
-                <span class="header__card-descr">Фридрих</span></a>
-              <a class="header__hidden-link header__real-third" href="#">
-                <span class="header__card-descr">Леонардо</span></a>
-              <a class="header__hidden-link header__real-forth" href="#">
-                <span class="header__card-descr">Верроккьо</span></a>
+          <div class="header-bottom__hidden">
+            <div class="header-bottom__hidden-block" data-simplebar>
+              <a class="header-bottom__hidden-link header-bottom__real-first" href="#">
+                <span class="header-bottom__card-descr">Тинторетто</span></a>
+              <a class="header-bottom__hidden-link header-bottom__real-second" href="#">
+                <span class="header-bottom__card-descr">Фридрих</span></a>
+              <a class="header-bottom__hidden-link header-bottom__real-third" href="#">
+                <span class="header-bottom__card-descr">Леонардо</span></a>
+              <a class="header-bottom__hidden-link header-bottom__real-forth" href="#">
+                <span class="header-bottom__card-descr">Верроккьо</span></a>
             </div>
           </div>
         </li>
-        <li class="header__item-bottom">
-          <button class="header__btn-bottom btn-reset" aria-label="список художников Импрессионизм">
+        <li class="header-bottom__item">
+          <button class="header-bottom__btn btn-reset" aria-label="список художников Импрессионизм">
             Импрессионизм
-            <svg id="arrow2" class="header__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg id="arrow2" class="header-bottom__arrow" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
-          <div class="header__hidden">
-            <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link header__impr-first" href="#">
-                <span class="header__card-descr">Моне</span></a>
-              <a class="header__hidden-link header__impr-second" href="#">
-                <span class="header__card-descr">Сислей</span></a>
-              <a class="header__hidden-link header__impr-third" href="#">
-                <span class="header__card-descr">Мане</span></a>
-              <a class="header__hidden-link header__impr-forth" href="#">
-                <span class="header__card-descr">Ренуар</span></a>
+          <div class="header-bottom__hidden">
+            <div class="header-bottom__hidden-block" data-simplebar>
+              <a class="header-bottom__hidden-link header-bottom__impr-first" href="#">
+                <span class="header-bottom__card-descr">Моне</span></a>
+              <a class="header-bottom__hidden-link header-bottom__impr-second" href="#">
+                <span class="header-bottom__card-descr">Сислей</span></a>
+              <a class="header-bottom__hidden-link header-bottom__impr-third" href="#">
+                <span class="header-bottom__card-descr">Мане</span></a>
+              <a class="header-bottom__hidden-link header-bottom__impr-forth" href="#">
+                <span class="header-bottom__card-descr">Ренуар</span></a>
             </div>
           </div>
         </li>
-        <li class="header__item-bottom">
-          <button class="header__btn-bottom btn-reset" aria-label="список художников Постимпрессионизм">
+        <li class="header-bottom__item">
+          <button class="header-bottom__btn btn-reset" aria-label="список художников Постимпрессионизм">
             Постимпрессионизм
-            <svg class="header__arrow" id="arrow3" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg class="header-bottom__arrow" id="arrow3" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
-          <div class="header__hidden">
-            <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link header__post-first" href="#">
-                <span class="header__card-descr">Ван Гог</span></a>
-              <a class="header__hidden-link header__post-second" href="#">
-                <span class="header__card-descr">Сезанн</span></a>
-              <a class="header__hidden-link header__post-third" href="#">
-                <span class="header__card-descr">Гоген</span></a>
-              <a class="header__hidden-link header__post-forth" href="#">
-                <span class="header__card-descr">Сёра</span></a>
+          <div class="header-bottom__hidden">
+            <div class="header-bottom__hidden-block" data-simplebar>
+              <a class="header-bottom__hidden-link header-bottom__post-first" href="#">
+                <span class="header-bottom__card-descr">Ван Гог</span></a>
+              <a class="header-bottom__hidden-link header-bottom__post-second" href="#">
+                <span class="header-bottom__card-descr">Сезанн</span></a>
+              <a class="header-bottom__hidden-link header-bottom__post-third" href="#">
+                <span class="header-bottom__card-descr">Гоген</span></a>
+              <a class="header-bottom__hidden-link header-bottom__post-forth" href="#">
+                <span class="header-bottom__card-descr">Сёра</span></a>
             </div>
           </div>
         </li>
-        <li class="header__item-bottom">
-          <button class="header__btn-bottom btn-reset" aria-label="список художников Авангард">
+        <li class="header-bottom__item">
+          <button class="header-bottom__btn btn-reset" aria-label="список художников Авангард">
             Авангард
-            <svg class="header__arrow" id="arrow4" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg class="header-bottom__arrow" id="arrow4" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
-          <div class="header__hidden">
-            <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link header__avan-first" href="#">
-                <span class="header__card-descr">Кандинский</span></a>
-              <a class="header__hidden-link header__avan-second" href="#">
-                <span class="header__card-descr">Маринетти</span></a>
-              <a class="header__hidden-link header__avan-third" href="#">
-                <span class="header__card-descr">Малевич</span></a>
-              <a class="header__hidden-link header__avan-forth" href="#">
-                <span  class="header__card-descr">Пикассо</span></a>
+          <div class="header-bottom__hidden">
+            <div class="header-bottom__hidden-block" data-simplebar>
+              <a class="header-bottom__hidden-link header-bottom__avan-first" href="#">
+                <span class="header-bottom__card-descr">Кандинский</span></a>
+              <a class="header-bottom__hidden-link header-bottom__avan-second" href="#">
+                <span class="header-bottom__card-descr">Маринетти</span></a>
+              <a class="header-bottom__hidden-link header-bottom__avan-third" href="#">
+                <span class="header-bottom__card-descr">Малевич</span></a>
+              <a class="header-bottom__hidden-link header-bottom__avan-forth" href="#">
+                <span class="header-bottom__card-descr">Пикассо</span></a>
             </div>
           </div>
         </li>
-        <li class="header__item-bottom">
-          <button class="header__btn-bottom btn-reset" aria-label="список художников Футуризм">
+        <li class="header-bottom__item">
+          <button class="header-bottom__btn btn-reset" aria-label="список художников Футуризм">
             Футуризм
-            <svg class="header__arrow" id="arrow5" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            <svg class="header-bottom__arrow" id="arrow5" width="12" height="7" viewBox="0 0 12 7" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M11 1L6 6L1 1" stroke="white" />
             </svg>
           </button>
-          <div class="header__hidden">
-            <div class="header__hidden-block" data-simplebar>
-              <a class="header__hidden-link header__futu-first" href="#">
-                <span class="header__card-descr">Карра</span></a>
-              <a class="header__hidden-link header__futu-second" href="#">
-                <span class="header__card-descr">Прателла</span></a>
-              <a class="header__hidden-link header__futu-third" href="#">
-                <span class="header__card-descr">Северини</span></a>
-              <a class="header__hidden-link header__futu-forth" href="#">
-                <span class="header__card-descr">Балла</span></a>
-              <a class="header__hidden-link header__futu-first" href="#">
-                <span class="header__card-descr">Карра</span></a>
-              <a class="header__hidden-link header__futu-second" href="#">
-                <span class="header__card-descr">Прателла</span></a>
-              <a class="header__hidden-link header__futu-third" href="#">
-                <span class="header__card-descr">Северини</span></a>
-              <a class="header__hidden-link header__futu-forth" href="#">
-                <span class="header__card-descr">Балла</span></a>
+          <div class="header-bottom__hidden">
+            <div class="header-bottom__hidden-block" data-simplebar>
+              <a class="header-bottom__hidden-link header-bottom__futu-first" href="#">
+                <span class="header-bottom__card-descr">Карра</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-second" href="#">
+                <span class="header-bottom__card-descr">Прателла</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-third" href="#">
+                <span class="header-bottom__card-descr">Северини</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-forth" href="#">
+                <span class="header-bottom__card-descr">Балла</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-first" href="#">
+                <span class="header-bottom__card-descr">Карра</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-second" href="#">
+                <span class="header-bottom__card-descr">Прателла</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-third" href="#">
+                <span class="header-bottom__card-descr">Северини</span></a>
+              <a class="header-bottom__hidden-link header-bottom__futu-forth" href="#">
+                <span class="header-bottom__card-descr">Балла</span></a>
             </div>
           </div>
         </li>
       </ul>
-      <form class="header__form flex">
-        <button class="header__form-btn btn-reset" type="submit">
-          <svg class="search__btn-img" aria-hidden="true" width="23" height="22" viewbox="0 0 23 22" fill="none"
+      <form class="header-bottom__form flex">
+        <button class="header-bottom__form-btn btn-reset" type="submit">
+          <svg class="header-bottom__searech-img" aria-hidden="true" width="23" height="22" viewbox="0 0 23 22" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695"
               transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"></rect>
@@ -250,7 +250,7 @@
               fill="white"></path>
           </svg>
         </button>
-        <input class="header__form-input" type="text" placeholder="Поиск по сайту"/>
+        <input class="header-bottom__form form-input" type="text" placeholder="Поиск по сайту"/>
       </form>
     </div>
   </header>
@@ -300,7 +300,7 @@
       <div class="container gallery__container">
         <div class="gallery__block flex">
           <div class="gallery__left-part">
-            <h3 class="gallary__title">Галерея</h3>
+            <h3 class="gallery__title">Галерея</h3>
             <div class="gallery__left-block flex">
               <div class="gallery__select-block">
                 <label class="gallery__selekt-label main-text" for="stale">Фильтр:</label>
@@ -513,7 +513,7 @@
           нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
           на&nbsp;независимые элементы.</p>
         <div class="catalog__content flex">
-          <div class="catalog__tabs-wrapper" id="catalog-tabs">
+          <div class="catalog__tabs-wrapper tab" id="catalog-tabs">
             <div class="catalog__tab tab__content tab__content--active" data-target="domeniko-girlandaio">
               <div class="tab__image">
                 <img src="img/Girlandajo.jpg" alt="Доменико Гирландайо">
@@ -543,7 +543,7 @@
               </div>
             </div>
           </div>
-          <div class="catalog__period-wrapper">
+          <div class="catalog__period-wrapper period">
             <ul class="period__list accordion list-reset">
               <li class="period__item">
                 <button class="period__btn btn-reset accordion__control">
@@ -990,7 +990,7 @@
           до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает
           их&nbsp;статус бесполезности. Прежде всего, постоянное
           информационно-пропагандистское
-          <button class="project__btn btn--tooltip btn-reset"
+          <button class="project__btn btn-tooltip btn-reset"
             data-tippy-content="Пример современных тенденций - современная методология разработки">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="tooltip-ellipse"
@@ -1005,7 +1005,7 @@
           однозначно фиксирует необходимость экономической целесообразности
           принимаемых решений. И&nbsp;нет сомнений, что действия
           представителей оппозиции могут быть рассмотрены
-          <button class="project__btn btn--tooltip btn-reset"
+          <button class="project__btn btn-tooltip btn-reset"
             data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции ">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="tooltip-ellipse"
@@ -1018,7 +1018,7 @@
           </button>
           исключительно
           в&nbsp;разрезе маркетинговых и&nbsp;финансовых
-          <button class="project__btn btn--tooltip btn-reset" data-tippy-content="В стремлении повысить качество">
+          <button class="project__btn btn-tooltip btn-reset" data-tippy-content="В стремлении повысить качество">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="tooltip-ellipse"
                 d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
@@ -1146,7 +1146,7 @@
     </section>
   </main>
   <footer>
-    <div class="footer__container container">
+    <div class="footer container">
       <div class="footer__block flex">
         <img class="footer__logo" src="img/logo.svg" alt="logotip">
         <ul class="list-reset flex">
