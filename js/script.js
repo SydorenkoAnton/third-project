@@ -38,13 +38,13 @@ document.addEventListener("click", function(e) {
 
 window.addEventListener('DOMContentLoaded', function () {
   const burgerBtn = document.querySelector('#burger');
-  const burger__menu = document.querySelector('#burger-menu');
+  const burger = document.querySelector('.burger');
   burgerBtn.addEventListener('click', function () {
     burgerBtn.classList.toggle('burger-icon-active');
     if (burgerBtn.classList.contains('burger-icon-active')) {
-      burger__menu.classList.add('burger-active');
+      burger.classList.add('burger-active');
     } else {
-      burger__menu.classList.remove('burger-active');
+      burger.classList.remove('burger-active');
     };
   });
 });
