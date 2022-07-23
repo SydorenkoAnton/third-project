@@ -595,6 +595,9 @@ h1, h2, h3, p {
 
 .header-top__link:focus-visible:not(:hover):not(:active).header-top__link:before {
   opacity: 1;
+  -webkit-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
 }
 
 .header-top__link:hover {
@@ -648,6 +651,9 @@ h1, h2, h3, p {
 
 .header-top__come-link:focus-visible:not(:hover):not(:active).header-top__come-link:before {
   opacity: 1;
+  -webkit-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
 }
 
 .header-top__come-link:hover .header-top__come-descr {
@@ -942,6 +948,9 @@ h1, h2, h3, p {
 
 .header-bottom__btn:focus-visible:not(:hover):not(:active).header-bottom__btn::before {
   opacity: 1;
+  -webkit-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
 }
 
 .header-bottom__btn:hover path {
@@ -1122,27 +1131,29 @@ h1, h2, h3, p {
   line-height: 25px;
   color: #fff;
   background-color: #9d5cd0;
-  -webkit-transition: -webkit-box-shadow .3s ease-in-out;
-  transition: -webkit-box-shadow .3s ease-in-out;
-  -o-transition: box-shadow .3s ease-in-out;
-  transition: box-shadow .3s ease-in-out;
-  transition: box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
-  -webkit-transition: background-color .3s ease-in-out;
-  -o-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition-property: background-color, border, color, box-shadow;
+  -o-transition-property: background-color, border, color, box-shadow;
+  transition-property: background-color, border, color, box-shadow;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .hero__link:hover {
   -webkit-box-shadow: inset 0 0 0 3px #d1a9f0;
           box-shadow: inset 0 0 0 3px #d1a9f0;
-  -webkit-transition: -webkit-box-shadow .3s ease-in-out;
-  transition: -webkit-box-shadow .3s ease-in-out;
-  -o-transition: box-shadow .3s ease-in-out;
-  transition: box-shadow .3s ease-in-out;
-  transition: box-shadow .3s ease-in-out, -webkit-box-shadow .3s ease-in-out;
-  -webkit-transition: background-color .3s ease-in-out;
-  -o-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition-property: background-color, border, color, box-shadow;
+  -o-transition-property: background-color, border, color, box-shadow;
+  transition-property: background-color, border, color, box-shadow;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .hero__link:before  {
@@ -1162,15 +1173,24 @@ h1, h2, h3, p {
 
 .hero__link:focus-visible.hero__link:before {
   opacity: 1;
+  -webkit-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
 }
 
 .hero__link:active {
   -webkit-box-shadow: inset 0 0 0 3px #d1a9f0;
           box-shadow: inset 0 0 0 3px #d1a9f0;
   background-color: #7943a4;
-  -webkit-transition: background-color .3s ease-in-out;
-  -o-transition: background-color .3s ease-in-out;
-  transition: background-color .3s ease-in-out;
+  -webkit-transition-property: background-color, box-shadow;
+  -o-transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .hero__slider {
@@ -1312,9 +1332,15 @@ h1, h2, h3, p {
 
 .choices__inner {
   border: 1px solid #fff;
-  -webkit-transition: background-color .4s ease-in-out;
-  -o-transition: background-color .4s ease-in-out;
-  transition: background-color .4s ease-in-out;
+  -webkit-transition-property: background-color, border;
+  -o-transition-property: background-color, border;
+  transition-property: background-color, border;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .choices .choices__inner, .choices .choices__list--dropdown {
@@ -1356,22 +1382,28 @@ h1, h2, h3, p {
 .choices__inner:hover, .choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
   color: var(--w-color);
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: background-color .4s ease-in-out;
-  -o-transition: background-color .4s ease-in-out;
-  transition: background-color .4s ease-in-out;
-  -webkit-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  -webkit-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .choices:focus {
   background-color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: background-color .4s ease-in-out;
-  -o-transition: background-color .4s ease-in-out;
-  transition: background-color .4s ease-in-out;
-  -webkit-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  -webkit-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .choices__list--single {
@@ -1386,6 +1418,9 @@ h1, h2, h3, p {
 
 .choices__list--dropdown {
 	overflow: visible;
+  -webkit-transition: overflow .3s ease-in-out;
+  -o-transition: overflow .3s ease-in-out;
+  transition: coverflow .3s ease-in-out;
 }
 
 .choices[data-type*=select-one]::after {
@@ -1399,11 +1434,11 @@ h1, h2, h3, p {
   -webkit-transform: translateY(-50%) rotate(45deg);
       -ms-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
-  -webkit-transition: -webkit-transform .4s ease-in-out;
-  transition: -webkit-transform .4s ease-in-out;
-  -o-transition: transform .4s ease-in-out;
-  transition: transform .4s ease-in-out;
-  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .choices[data-type*=select-one].is-open::after {
@@ -1416,10 +1451,28 @@ h1, h2, h3, p {
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
   background-color: transparent;
+  -webkit-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
   background-color: rgba(255, 255, 255, 0.2);
+  -webkit-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .gallery__checkbox-list {
@@ -1431,17 +1484,17 @@ h1, h2, h3, p {
 }
 
 .choices__item {
-  -webkit-transition: background-color 0.4s ease-in-out;
-  -o-transition: background-color 0.4s ease-in-out;
-  transition: background-color 0.4s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
 }
 
 .gallery__check-text {
   margin-left: 24px;
   color: #fff;
-  -webkit-transition: color 0.4s ease-in-out;
-  -o-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .gallery__check-label {
@@ -1456,24 +1509,45 @@ h1, h2, h3, p {
 
 .check:focus-visible+.gallery__check-text::before {
   border-color: #c283f3;
+  -webkit-transition: border-color .3s ease-in-out;
+  -o-transition: border-color .3s ease-in-out;
+  transition: border-color .3s ease-in-out;
 }
 
 .check:focus-visible+.gallery__check-text {
   color: #c283f3;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .check:hover+.gallery__check-text::before {
   border-color: #c283f3;
+  -webkit-transition-property: border-color;
+  -o-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .check:hover+.gallery__check-text {
   color: var(--w-color);
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .check {
   position: absolute;
   z-index: 1;
   opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .gallery__check-text::before {
@@ -1488,9 +1562,15 @@ h1, h2, h3, p {
   border: 1px solid #fff;
   width: 12px;
   height: 12px;
-  -webkit-transition: border-color 0.4s ease-in-out;
-  -o-transition: border-color 0.4s ease-in-out;
-  transition: border-color 0.4s ease-in-out;
+  -webkit-transition-property: background-color, border;
+  -o-transition-property: background-color, border;
+  transition-property: background-color, border;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .gallery__check-text::after {
@@ -1503,19 +1583,35 @@ h1, h2, h3, p {
   height: 4px;
   background-color: #c283f3;
   opacity: 0;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
 
 .check:checked+.gallery__check-text::before {
   border-color: #c283f3;
+  -webkit-transition-property: border-color;
+  -o-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .check:checked+.gallery__check-text {
   color: #c283f3;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .check:checked+.gallery__check-text::after {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
 }
 
@@ -1587,7 +1683,7 @@ h1, h2, h3, p {
 }
 
 .gallery__prev:focus-visible {
-  border: 3px solid #000;
+  border: 2px solid #000;
   -webkit-transition: border .3s ease-in-out;
   -o-transition: border .3s ease-in-out;
   transition: border .3s ease-in-out;
@@ -1608,9 +1704,9 @@ h1, h2, h3, p {
 .gallery__next:hover,
 .gallery__prev:hover {
   background-color: #9d5cd0;
-  -webkit-transition: border-color .3s ease-in-out;
-  -o-transition: border-color .3s ease-in-out;
-  transition: border-color .3s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
 }
 
 .nav-btn:hover.swiper-button-disabled {
@@ -1620,19 +1716,28 @@ h1, h2, h3, p {
 .gallery__next:focus-visible,
 .gallery__prev:focus-visible {
   background-color: #666;
-  outline: 2px solid #000;
-  -webkit-transition: border-color .3s ease-in-out;
-  -o-transition: border-color .3s ease-in-out;
-  transition: border-color .3s ease-in-out;
+  border: 2px solid #000;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  -webkit-transition: border .3s ease-in-out;
+  -o-transition: border .3s ease-in-out;
+  transition: border .3s ease-in-out;
 }
 
 .gallery__next:active,
 .gallery__prev:active {
   background-color: #7943a4;
   border: 2px solid #000;
-  -webkit-transition: border .3s ease-in-out;
-  -o-transition: border .3s ease-in-out;
-  transition: border .3s ease-in-out;
+  -webkit-transition-property: background-color, border;
+  -o-transition-property: background-color, border;
+  transition-property: background-color, border;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .gallery__slide {
@@ -1651,9 +1756,15 @@ h1, h2, h3, p {
   border: 3px solid transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
-  -o-transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
-  transition: background-color .4s ease-in-out, border-color .4s ease-in-out;
+-webkit-transition-property: background-color, border-color;
+-o-transition-property: background-color, border-color;
+transition-property: background-color, border-color;
+-webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+        transition-duration: .3s;
+-webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
 }
 
 .gallery__slide::after {
@@ -1674,23 +1785,44 @@ h1, h2, h3, p {
   background-size: 100px;
   background-position: center;
   background-clip: content-box;
-  -webkit-transition: opacity .4s ease-in-out;
-  -o-transition: opacity .4s ease-in-out;
-  transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .gallery__slide:hover::after {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .gallery__slide:focus-visible::before {
   border-color: #7943A4;
+  -webkit-transition-property: border-color;
+  -o-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .gallery__slide:active::before {
   border-color: #d1a9f0;
   background-color: rgba(194, 131, 243, 0.4);
-  }
+  -webkit-transition-property: background-color, border-color;
+-o-transition-property: background-color, border-color;
+transition-property: background-color, border-color;
+-webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+        transition-duration: .3s;
+-webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+}
 
 .gallery__image {
   position: absolute;
@@ -1715,9 +1847,9 @@ h1, h2, h3, p {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .popup.open {
@@ -1729,6 +1861,15 @@ h1, h2, h3, p {
   opacity: 1;
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  -webkit-transition-property: opacity, transform;
+  -o-transition-property: opacity, transform;
+  transition-property: opacity, transform;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;        
 }
 
 .popup__body {
@@ -1875,9 +2016,15 @@ h1, h2, h3, p {
 
 .tab__content--active {
   display: block;
-  -webkit-transition: display .3s ease-in-out;
-  -o-transition: display .3s ease-in-out;
-  transition: display .3s ease-in-out;
+  -webkit-transition-property: display;
+  -o-transition-property: display;
+  transition-property: display;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .tab__image {
@@ -1945,9 +2092,15 @@ h1, h2, h3, p {
   width: 100%;
   border-top: 1px solid transparent;
   border-bottom: 1px solid #cacaca;
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -o-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .period__item:first-child {
@@ -1958,17 +2111,23 @@ h1, h2, h3, p {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  -o-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .accordion__icon-circle {
-  -webkit-transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+  -webkit-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .ui-corner-all,
@@ -1998,6 +2157,9 @@ h1, h2, h3, p {
 
 .period__btn:focus-visible:not(:hover):not(:active) {
   color: #fff;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .period__btn-inner {
@@ -2011,9 +2173,9 @@ h1, h2, h3, p {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .period__btn-inner::before {
@@ -2041,50 +2203,59 @@ h1, h2, h3, p {
   border-top: 1px solid #9d5cd0;
   border-bottom: 1px solid #9d5cd0;
   color: #9d5cd0;
-  -webkit-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out;
-  -webkit-transition: border-top .3s ease-in-out;
-  -o-transition: border-top .3s ease-in-out;
-  transition: border-top .3s ease-in-out;
-  -webkit-transition: border-bottom .3s ease-in-out;
-  -o-transition: border-bottom .3s ease-in-out;
-  transition: border-bottom .3s ease-in-out;
+  -webkit-transition-property: color, border-top, border-bottom;
+  -o-transition-property: color, border-top, border-bottom;
+  transition-property: color, border-top, border-bottom;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .period__btn:hover .accordion__icon-circle,
 .period__btn:focus-visible .accordion__icon-circle {
   fill: #d1a9f0;
   stroke: #d1a9f0;
-  -webkit-transition: fill .3s ease-in-out;
-  -o-transition: fill .3s ease-in-out;
-  transition: fill .3s ease-in-out;
-  -webkit-transition: stroke .3s ease-in-out;
-  -o-transition: stroke .3s ease-in-out;
-  transition: stroke .3s ease-in-out;
+  -webkit-transition-property: fill, stroke;
+  -o-transition-property: fill, stroke;
+  transition-property: fill, stroke;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .period__btn:active .accordion__icon-circle {
   fill: #d1a9f0;
   stroke: #9d5cd0;
-  -webkit-transition: fill .3s ease-in-out;
-  -o-transition: fill .3s ease-in-out;
-  transition: fill .3s ease-in-out;
-  -webkit-transition: stroke .3s ease-in-out;
-  -o-transition: stroke .3s ease-in-out;
-  transition: stroke .3s ease-in-out;
+  -webkit-transition-property: fill, stroke;
+  -o-transition-property: fill, stroke;
+  transition-property: fill, stroke;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .period__btn:active {
   border-top: 1px solid #7943a4;
   border-bottom: 1px solid #7943a4;
   color: #7943a4;
-  -webkit-transition: border-top .3s ease-in-out;
-  -o-transition: border-top .3s ease-in-out;
-  transition: border-top .3s ease-in-out;
-  -webkit-transition: border-bottom .3s ease-in-out;
-  -o-transition: border-bottom .3s ease-in-out;
-  transition: border-bottom .3s ease-in-out;
+  -webkit-transition-property: color, border-top, border-bottom;
+  -o-transition-property: color, border-top, border-bottom;
+  transition-property: color, border-top, border-bottom;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .ui-widget-content {
@@ -2119,9 +2290,9 @@ h1, h2, h3, p {
 .artist__btn {
   font-size: 17px;
   position: relative;
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .artist__btn::before {
@@ -2264,9 +2435,9 @@ h1, h2, h3, p {
 
 .more-link {
   position: relative;
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 .more-link__inner {
@@ -2283,24 +2454,24 @@ h1, h2, h3, p {
   right: -8px;
   background-color: #9d5cd0;
   opacity: 0;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .more-link:focus-visible:not(:hover).more-link::before {
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .more-link:focus-visible {
   color: #fff;
-  transition: color 0.3s ease-in-out;
+  transition: color .3s ease-in-out;
 }
 
 /* event */
@@ -2377,24 +2548,31 @@ h1, h2, h3, p {
   position: relative;
   margin-top: auto;
   color: #9d5cd0;
+  width: 88px;
   border-bottom: 1px solid #9d5cd0;
-  -webkit-transition: border .4s ease-in-out;
-  -o-transition: border .4s ease-in-out;
-  transition: border .4s ease-in-out;
-  -webkit-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  -webkit-transition-property: border, color;
+  -o-transition-property: border, color;
+  transition-property: border, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .events-card__link:hover {
   color: #7943A4;
   border-bottom: 1px solid #7943a4;
-  -webkit-transition: border .4s ease-in-out;
-  -o-transition: border .4s ease-in-out;
-  transition: border .4s ease-in-out;
-  -webkit-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  -webkit-transition-property: border-bottom, color;
+  -o-transition-property: border-bottom, color;
+  transition-property: border-bottom, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .events-card__link:before {
@@ -2407,35 +2585,44 @@ h1, h2, h3, p {
   left: -3px;
   background-color: #9d5cd0;
   opacity: 0;
-  -webkit-transition: opacity .4s ease-in-out;
-  -o-transition: opacity .4s ease-in-out;
-  transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .events-card__link:focus:not(:hover):not(:active) {
   color: var(--w-color);
   border-bottom: 1px solid #fff;
-  -webkit-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
-  -webkit-transition: border-bottom .4s ease-in-out;
-  -o-transition: border-bottom .4s ease-in-out;
-  transition: border-bottom .4s ease-in-out;
+  -webkit-transition-property: border-bottom, color;
+  -o-transition-property: border-bottom, color;
+  transition-property: border-bottom, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .events-card__link:focus:not(:hover):not(:active).events-card__link:before {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }  
 
 .events-card__link:active {
   color: #333;
   border-bottom: 1px solid #333;
-  -webkit-transition: border .3s ease-in-out;
-  -o-transition: border .3s ease-in-out;
-  transition: border .3s ease-in-out;
-  -webkit-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out;
+  -webkit-transition-property: border-bottom, color;
+  -o-transition-property: border-bottom, color;
+  transition-property: border-bottom, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .swiper-button-next--events, .swiper-button-prev--events {
@@ -2567,17 +2754,29 @@ h1, h2, h3, p {
 
 .project__btn:hover.project__btn::before {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__btn:focus.project__btn::before {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__btn:active .tooltip-i  {
   fill: var(--w-color);
-  -webkit-transition: fill .3s ease-in-out;
-  -o-transition: fill .3s ease-in-out;
-  transition: fill .3s ease-in-out;
+  -webkit-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .project__btn:active.project__btn::before {
@@ -2624,6 +2823,9 @@ h1, h2, h3, p {
 
 .project__link:hover.project__link:after  {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__link:focus:not(:hover):not(:active) {
@@ -2635,6 +2837,9 @@ h1, h2, h3, p {
 
 .project__link:focus:not(:hover):not(:active).project__link:before {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__link:active {
@@ -2646,10 +2851,22 @@ h1, h2, h3, p {
 
 .project__link:active.project__link:after  {
   opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__descr__link-detmin {
   display: none;
+  -webkit-transition-property: display;
+  -o-transition-property: display;
+  transition-property: display;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .project__subtitle {
@@ -2681,7 +2898,15 @@ h1, h2, h3, p {
   height: 150px;
   -webkit-box-shadow: inset 0 0 0 2px #ececec;
           box-shadow: inset 0 0 0 2px #ececec;
-  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .project__img {
@@ -2714,28 +2939,32 @@ transition: opacity .3s ease-in-out;
   bottom: 0;
   border: 2px solid #9d5cd0;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__img:hover {
   opacity: 1;
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .project__item:focus-visible {
   -webkit-box-shadow: inset 0 0 0 2px #9d5cd0;
   box-shadow: inset 0 0 0 2px #9d5cd0;
-  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
-  transition: -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .project__item:active.project__item::before {
@@ -2749,12 +2978,15 @@ transition: opacity .3s ease-in-out;
   border: 2px solid transparent;
   border-radius: 30px;
   background-color: #ececec;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-  -webkit-transition: outline 0.3s ease-in-out;
-  -o-transition: outline 0.3s ease-in-out;
-  transition: outline 0.3s ease-in-out;
+  -webkit-transition-property: background-color, outline;
+  -o-transition-property: background-color, outline;
+  transition-property: background-color, outline;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .swiper-button-prev--project {
@@ -2773,23 +3005,41 @@ transition: opacity .3s ease-in-out;
 
 .swiper-button-next--project:hover, .swiper-button-prev--project:hover {
   background-color: #d1a9f0;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .swiper-button-next--project:focus, .swiper-button-prev--project:focus {
   outline: 2px solid #9d5cd0;
-  -webkit-transition: outline 0.3s ease-in-out;
-  -o-transition: outline 0.3s ease-in-out;
-  transition: outline 0.3s ease-in-out;
+  -webkit-transition-property: outline;
+  -o-transition-property: outline;
+  transition-property: outline;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .swiper-button-next--project:active, .swiper-button-prev--project:active {
   background-color: #9d5cd0;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .map__wrapper {
@@ -2833,23 +3083,41 @@ transition: opacity .3s ease-in-out;
   padding-left: 24px;
   border: 1px solid #333333;
   border-radius: 100px;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .contacts__input:hover {
   background-color: #eaeaea;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .contacts__input:active {
   background-color: #eaeaea;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .contacts__form-card {
@@ -2861,6 +3129,7 @@ transition: opacity .3s ease-in-out;
   width: 329px;
   height: 50px;
   padding-left: 10px;
+  background-color: var(--w-color);
   border-radius: 100px;
   border: 2px solid #9d5cd0;
   font-style: normal;
@@ -2873,9 +3142,9 @@ transition: opacity .3s ease-in-out;
   -o-transition-property: background-color, color, box-shadow;
   transition-property: background-color, color, box-shadow;
   transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: .4s;
-      -o-transition-duration: .4s;
-          transition-duration: .4s;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
   -webkit-transition-timing-function: ease-in-out;
       -o-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
@@ -2885,12 +3154,15 @@ transition: opacity .3s ease-in-out;
   background-color: #9d5cd0;
   color: var(--w-color);
   border: 3px solid #d1a9f0;
-  -webkit-transition-property: background-color, color;
-  -o-transition-property: background-color, color;
-  transition-property: background-color, color;
-  -webkit-transition-duration: .4s;
-       -o-transition-duration: .4s;
-          transition-duration: .4s;
+  -webkit-transition-property: background-color, border, color;
+  -o-transition-property: background-color, border, color;
+  transition-property: background-color, border, color;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .contacts__btn:focus-visible:not(:active):before {
@@ -2903,9 +3175,9 @@ transition: opacity .3s ease-in-out;
   left: -5px;
   border-radius: 100px;
   border: 2px solid #c283f3;
-  -webkit-transition: border .4s ease-in-out;
-  -o-transition: border .4s ease-in-out;
-  transition: border .4s ease-in-out;
+  -webkit-transition: border .3s ease-in-out;
+  -o-transition: border .3s ease-in-out;
+  transition: border .3s ease-in-out;
 }
 
 .contacts__btn:active {
@@ -2919,9 +3191,9 @@ transition: opacity .3s ease-in-out;
   -o-transition-property: background-color, color, box-shadow;
   transition-property: background-color, color, box-shadow;
   transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: .4s;
-      -o-transition-duration: .4s;
-          transition-duration: .4s;
+  -webkit-transition-duration: .3s;
+      -o-transition-duration: .3s;
+          transition-duration: .3s;
   -webkit-transition-timing-function: ease-in-out;
       -o-transition-timing-function: ease-in-out;
           transition-timing-function: ease-in-out;
@@ -2951,9 +3223,9 @@ transition: opacity .3s ease-in-out;
   z-index: 1;
   width: 40px;
   height: 40px;
-  -webkit-transition: opacity .4s ease-in-out;
-  -o-transition: opacity .4s ease-in-out;
-  transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .contacts__item:not(:last-child) {
@@ -2962,16 +3234,16 @@ transition: opacity .3s ease-in-out;
 
 .contacts__item:hover:not(:active) {
   opacity: 0.5;
-  -webkit-transition: opacity .4s ease-in-out;
-  -o-transition: opacity .4s ease-in-out;
-  transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .contacts__item:focus-visible:not(:active) {
   opacity: 0.5;
-  -webkit-transition: opacity .4s ease-in-out;
-  -o-transition: opacity .4s ease-in-out;
-  transition: opacity .4s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+  -o-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
 }
 
 .contacts__item:active::before {
@@ -3040,30 +3312,54 @@ transition: opacity .3s ease-in-out;
 }
 
 .footer__messenger path {
-  -webkit-transition: fill 0.4s ease-in-out;
-  -o-transition: fill 0.4s ease-in-out;
-  transition: fill 0.4s ease-in-out;
+  -webkit-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .footer__messenger:hover path {
   fill: #fff;
-  -webkit-transition: fill 0.4s ease-in-out;
-  -o-transition: fill 0.4s ease-in-out;
-  transition: fill 0.4s ease-in-out;
+  -webkit-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .footer__messenger:focus path {
   fill: #fff;
-  -webkit-transition: fill 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out;
+  -webkit-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 .footer__messenger:active path {
   fill: #9d5cd0;
-  -webkit-transition: fill 0.3s ease-in-out;
-  -o-transition: fill 0.3s ease-in-out;
-  transition: fill 0.3s ease-in-out;
+  -webkit-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  -webkit-transition-duration: .4s;
+      -o-transition-duration: .4s;
+          transition-duration: .4s;
+  -webkit-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 
 @media (max-width: 1600px) {
